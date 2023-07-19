@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor SignUp Page</title>
+    <style>
+        body {
+            font-family: Monaco, monospace;
+            background-color: #ccccec;
+        }
+
+        form {
+            position: absolute;
+            left:33%;
+            background-color: #9797aa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:#8a05b3;
+            /* text-shadow: 2px 2px 4px #000000; */
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color:white;
+            /* text-shadow: 1px 1px 2px #000000; */
+        }
+
+        input[type="text"],
+        input[type="password"],input[type="email"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f0e8e8;
+        }
+        [type="radio"]{
+            background: white;
+        }
+        input[type="submit"] {
+            background-color: #bbbbf3;
+            color: #8a05b3;
+            cursor: pointer;
+            font-size: 16px;
+            left:27%;
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 30px;
+            font-size: 18px;
+            font-family: serif;
+            text-decoration: none;
+            border: 2px solid rgb(73, 69, 69);
+            letter-spacing: 1px;
+            text-align: center;
+            position: relative;
+            transition: all .5s;
+        }
+
+        /* .styled{
+            position: relative;
+            left:25%;
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: #f0e8e8;
+            border: 2px solid #333;
+            letter-spacing: 1px;
+            text-align: center;
+            position: relative;
+            transition: all .5s;
+            background-color: #151517;
+        }
+        */
+        input[type="submit"]:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #8a05b3;
+            transition: all .35s;
+        }
+
+        input[type="submit"]:hover {
+            color: white;
+            background-color: #8a05b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            /* text-shadow: 1px 1px 2px #000000; */
+        }
+
+        a {
+            color: #8a05b3;
+            text-decoration: none;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <h1>Doctor SignUp Window</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+        <label for="sname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="" style="color:white">Gender</label><br>
+        <label for="gender" style="color:white;font-size: 18px;font-family: sans-serif;"><input type="radio" name="gender" value="0" id="male" required>Male</label><br>
+        <label for="gender" style="color:white;font-size: 18px;font-family: sans-serif;"><input type="radio" name="gender" value="1" id="female">Female</label><br>
+        <label for="gender" style="color:white;font-size: 18px;font-family: sans-serif;"><input type="radio" name="gender" value="2" id="other">Other</label><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input class="styled" type="submit" value="SignUp">
+        <p class="error">{{error}}</p>
+        <p>Have an account already? <a href="/doctor_login">Login here</a>.</p>
+    </form>
+</body>
+</html>

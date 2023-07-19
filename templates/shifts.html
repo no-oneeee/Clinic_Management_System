@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ccccec;
+            background-size: 120%;
+        }
+
+        #form {
+            position: absolute;
+            top:20%;
+            left:27%;
+            background-color: #9797aa;
+            height: 340px;
+            width: 700px;
+            margin: auto;
+            padding: 20px 20px 20px 20px;
+            padding-bottom: 0px;
+            opacity: 0.7;
+
+        }
+
+        h1{
+            position: absolute;
+            top:10%;
+            left: 50%;
+            margin-bottom: 40px;
+        }
+
+        .container{
+            background-color: #ccccec;
+        }
+
+        #form h3 {
+            border-bottom: 2px solid #fff;
+            width: 210px;
+            padding: 10px;
+        }
+
+        ::placeholder {
+            color: #fff
+        }
+
+        #input #input-group {
+            width: 300px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input2 #input-group {
+            width: 195px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #ffffff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input3 #input-group {
+            margin-left: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input4 #input-group {
+            width: 300px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input4 #input-group1 {
+            width: 615px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #8a05b3;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input5 h3 {
+            border-bottom: 2px solid #fff;
+            width: 220px;
+            padding: 5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input6 #input-group {
+            width: 300px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #input6 #input-group1 {
+            width: 615px;
+            margin: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .text-center{
+            color: #8a05b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .text-white{
+            color: #8a05b3;
+        }
+
+        .help{
+            background-color: #ccccec;
+            color: #8a05b3;
+            cursor: pointer;
+            font-size: 16px;
+            left:19%;
+            top: 5%;
+            display: inline;
+            width: 170px;
+            height: 40px;
+            line-height: 30px;
+            font-size: 18px;
+            font-family: serif;
+            text-decoration: none;
+            border: 2px solid rgb(73, 69, 69);
+            letter-spacing: 1px;
+            text-align: center;
+            position: relative;
+            transition: all .5s;
+            margin-right: 10%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .help:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #8a05b3;
+            transition: all .35s;
+        }
+
+        .help:hover{
+            color: white;
+            background-color: #8a05b3;
+        }
+
+        .text-primary{
+            color: #8a05b3;
+        }
+        .styled {
+            position: absolute;
+            top:7%;
+            left:38%;
+            background-color: #ccccec;
+            color: #8a05b3;
+            cursor: pointer;
+            font-size: 16px;
+            width: 170px;
+            height: 40px;
+            font-size: 18px;
+            font-family: serif;
+            border: 2px solid rgb(73, 69, 69);
+            line-height: 25px;
+            letter-spacing: 1px;
+            text-align: center;
+            position: relative;
+            transition: all .5s;
+            padding-top: 1%;
+        }
+
+        /* .styled{
+            position: relative;
+            left:25%;
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: #f0e8e8;
+            border: 2px solid #333;
+            letter-spacing: 1px;
+            text-align: center;
+            position: relative;
+            transition: all .5s;
+            background-color: #151517;
+        }
+        */
+        .styled:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #8a05b3;
+            transition: all .35s;
+        }
+
+        .styled:hover {
+            color: white;
+            background-color: #8a05b3;
+            text-decoration: none;
+        }
+        p{
+            text-align: center;
+            position: relative;
+            color: white;
+            left: 25%;
+            top:10%;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding-left: 10px;
+            width: 50%;
+        }
+
+        .error {
+            color: red;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a{
+            position: absolute;
+            top: 53.5%;
+            left: 45%;
+        }
+        div .styled{
+            padding-top: 3%;
+        }
+    </style>
+</head>>
+
+<body>
+    <div class="container">
+
+        <form class="form-group" method="POST">
+            <h1 class="text-center">
+                Shifts 
+            </h1>
+            <div id="form">
+                <h3 class="text-white">Shift Details</h3>
+
+                <div id="input">
+                    <input type="text" id="input-group" placeholder="Shift" name="start_loc" required>
+                    <input type="text" id="input-group" placeholder="Date (YYYY/MM/DD)" name="date" required>
+                </div>
+                <line>
+                    <input class="help" type="submit" value="View">
+                    <a href="/home">
+                        <div class="styled">Back</div>
+                    </a>
+                </line>
+                <p>{{message}}</p>
+                <p class="error">{{error}}</p>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
